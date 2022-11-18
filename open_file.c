@@ -6,7 +6,8 @@ void open(char **argv)
 	char* buf = NULL, *token = NULL, command[1024];
 	size_t len = 0;
 	ssize_t line_size;
-	unsigned int l = 1;
+	unsigned int line_number = 1;
+	stack_t *first_node;
 
 	file = fopen(argv[1], "r");
 	while ((line_size = getline(&buf, &len, file)) != EOF)
@@ -20,5 +21,5 @@ void open(char **argv)
 		}
 		if (strcmp(command, token) == "pall")
 			;
-		l++;
-		
+		line_number++;
+	}
