@@ -1,9 +1,9 @@
 #include "monty.h"
+int num;
 
 void open(char **argv)
 {
 	void (*p_func)(stack_t **, unsigned int);
-	int num;
 	char* buf = NULL, *token = NULL, command[1024];
 	size_t len = 0;
 	ssize_t line_size;
@@ -24,6 +24,7 @@ void open(char **argv)
 				return;
 			p_func(&first_node, line_number);
 		}
+		line_number++;
 	}
 	return;
 }
