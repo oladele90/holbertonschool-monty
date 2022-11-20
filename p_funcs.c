@@ -4,7 +4,7 @@
  *
  */
 
-void push_func(stack_t **first_node, unsigned int line_number)
+void push_op(stack_t **first_node, unsigned int line_number)
 {
 	stack_t *new;
 
