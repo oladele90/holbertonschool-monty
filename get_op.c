@@ -6,7 +6,7 @@
  *
  */
 
-void (*get_op(char *opcode))
+void (*get_op(char *opcode))(stack_t **, unsigned int)
 {
 	instruction_t ops [] = {
 		{"push", push_op},
