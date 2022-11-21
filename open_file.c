@@ -25,7 +25,7 @@ void _open(char **argv)
 		if (strcmp(token, "push") == 0)
 		{
 			token = strtok(NULL, "\t\n ");
-			if (token == NULL)
+			if (token == NULL || num_check(token) != 1)
 			{
 				fprintf(stderr, "L%d: usage: push integer\n",
 					line_number);
@@ -41,4 +41,21 @@ void _open(char **argv)
 	if (buf != NULL)
 		free(buf);
 	free_stack(first_node);
+}
+
+/**
+ *
+ */
+
+int num_check(*token)
+{
+	int i;
+	if (*token == NULL)
+		return (-1);
+	for (i = 0; token[i] != '\0'; i++)
+	{
+		if (isdigit(token[i]) == 0)
+			return (-1);
+	}
+	return (1);
 }
