@@ -65,7 +65,7 @@ int num_check(char *token)
 		return (-1);
 	for (i = 0; token[i] != '\0'; i++)
 	{
-		if (isdigit(token[i]) == 0)
+		if (token[i] != '-' && isdigit(token[i]) == 0)
 			return (-1);
 	}
 	return (1);
