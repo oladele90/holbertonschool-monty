@@ -19,6 +19,6 @@ void (*get_op(char *opcode, unsigned int line_number))(stack_t **, unsigned int)
 		if (strcmp(opcode, ops[i].opcode) == 0)
 			return (ops[i].f);
 	}
-	printf("L%d: unknown instruction %s\n", line_number, opcode);
+	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
 	return (NULL);
 }
