@@ -1,5 +1,4 @@
 #include "monty.h"
-int num;
 
 void _open(char **argv)
 {
