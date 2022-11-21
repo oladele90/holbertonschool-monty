@@ -20,5 +20,6 @@ void (*get_op(char *opcode, unsigned int line_number))(stack_t **, unsigned int)
 			return (ops[i].f);
 	}
 	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
+	exit(EXIT_FAILURE);
 	return (NULL);
 }
