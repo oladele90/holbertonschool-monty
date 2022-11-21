@@ -2,7 +2,11 @@
 
 int main(int argc, char **argv)
 {
-	(void) argc;
-	open(argv);
+	if (argc != 2)
+	{
+		fprintf(stderr, "USAGE: monty file");
+		exit(EXIT_FAILURE);
+	}
+	_open(argv);
 	return (0);
 }
