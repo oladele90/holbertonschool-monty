@@ -36,7 +36,7 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void (*get_op(char *opcode))(stack_t **, unsigned int);
+void (*get_op(char *opcode, unsigned int line_number))(stack_t **, unsigned int);
 void push_op(stack_t **first_node, unsigned int line_number);
 void _open(char **argv);
 int main(int argc, char **argv);
