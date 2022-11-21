@@ -14,7 +14,7 @@ void push_op(stack_t **first_node, unsigned int line_number)
 	new = malloc(sizeof(stack_t));
 	new->n = num;
 	new->prev = NULL;
-	if (first_node != NULL)
+	if (first_node != NULL && *first_node != NULL)
 	{
 		new->next = *first_node;
 		(*first_node)->prev = new;
