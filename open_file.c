@@ -47,10 +47,10 @@ void _open(char **argv)
  *
  */
 
-int num_check(*token)
+int num_check(char *token)
 {
 	int i;
-	if (*token == NULL)
+	if (token == NULL)
 		return (-1);
 	for (i = 0; token[i] != '\0'; i++)
 	{

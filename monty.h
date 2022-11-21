@@ -41,5 +41,5 @@ void push_op(stack_t **first_node, unsigned int line_number);
 void _open(char **argv);
 int main(int argc, char **argv);
 void free_stack(stack_t *first_node);
-
+int num_check(char *token);
 #endif
