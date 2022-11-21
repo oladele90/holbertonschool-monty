@@ -32,7 +32,22 @@ void _open(char **argv)
 				exit(EXIT_FAILURE);
 			}
 			num = atoi(token);
-			p_func = get_op(command);
+			p_func = get_op(command, line_number);
+			if (p_func == NULL)
+			{
+				line_number++;
+				continue;
+			}
+			p_func(&first_node, line_number);
+		}
+		else
+		{
+			p_func = get_op(command, line_number);
+			if (p_func == NULL)
+			{
+				line_number++;
+				continue;
+			}
 			p_func(&first_node, line_number);
 		}
 		line_number++;

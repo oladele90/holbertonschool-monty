@@ -6,7 +6,7 @@
  *
  */
 
-void (*get_op(char *opcode))(stack_t **, unsigned int)
+void (*get_op(char *opcode, unsigned int line_number))(stack_t **, unsigned int)
 {
 	instruction_t ops [] = {
 		{"push", push_op},
@@ -19,5 +19,6 @@ void (*get_op(char *opcode))(stack_t **, unsigned int)
 		if (strcmp(opcode, ops[i].opcode) == 0)
 			return (ops[i].f);
 	}
+	printf("L%d: unknown instruction %s\n", line_number, opcode);
 	return (NULL);
 }
