@@ -43,10 +43,7 @@ void _open(char **argv)
 		{
 			p_func = get_op(command, line_number);
 			if (p_func == NULL)
-			{
-				line_number++;
 				continue;
-			}
 			p_func(&first_node, line_number);
 		}
 		line_number++;
