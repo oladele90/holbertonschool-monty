@@ -42,3 +42,17 @@ void free_stack(stack_t *first_node)
 	}
 	free(first_node);
 }
+
+/**
+ *
+ */
+
+void pall_op(stack_t **first_node, unsigned int line_number)
+{
+	(void) line_number;
+	while (*first_node != NULL)
+	{
+		printf("%d\n", (*first_node)->n);
+		*first_node = (*first_node)->next;
+	}
+}
