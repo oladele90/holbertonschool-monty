@@ -43,4 +43,5 @@ int main(int argc, char **argv);
 void free_stack(stack_t *first_node);
 int num_check(char *token);
 void pall_op(stack_t **first_node, unsigned int line_number);
+int com_check(char *token, unsigned int line_number);
 #endif

@@ -21,6 +21,11 @@ void _open(char **argv)
 		if (token == NULL)
       		continue;
 		strcpy(command, token);
+		if (com_check(token, line_number) == 1)
+		{
+			line_number++;
+			continue;
+		}
 		if (strcmp(token, "push") == 0)
 		{
 			token = strtok(NULL, "\t\n ");
@@ -62,4 +67,12 @@ int num_check(char *token)
 			return (-1);
 	}
 	return (1);
+}
+
+int com_check(char *token, unsigned int line_number)
+{
+	(void) line_number;
+	if (token == NULL || token[0] == '#')
+		return (1);
+	return (-1);
 }
