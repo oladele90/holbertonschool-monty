@@ -50,4 +50,5 @@ void pint_op(stack_t **first_node, unsigned int line_number);
 void pop_op(stack_t **first_node, unsigned int line_number);
 void swap_op(stack_t **first_node, unsigned int line_number);
 void add_op(stack_t **first_node, unsigned int line_number);
+void nop_op(stack_t **first_node, unsigned int line_number);
 #endif

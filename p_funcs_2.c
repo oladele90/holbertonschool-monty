@@ -60,3 +60,9 @@ void add_op(stack_t **first_node, unsigned int line_number)
 	new->n += (*first_node)->n;
 	pop_op(first_node, line_number);
 }
+
+void nop_op(stack_t **first_node, unsigned int line_number)
+{
+	(void) *first_node;
+	(void) line_number;
+}
