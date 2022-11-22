@@ -61,6 +61,12 @@ void add_op(stack_t **first_node, unsigned int line_number)
 	pop_op(first_node, line_number);
 }
 
+/**
+ * nop_op - does nothing
+ * @first_node: pointer to pointer of first node in stack
+ * @line_number: current line number in file
+ */
+
 void nop_op(stack_t **first_node, unsigned int line_number)
 {
 	(void) *first_node;
