@@ -47,5 +47,6 @@ int com_check(char *token, unsigned int line_number);
 void ie(unsigned int line_number);
 void opf(char **argv);
 void pint_op(stack_t **first_node, unsigned int line_number);
+void pop_op(stack_t **first_node, unsigned int line_number);
 
 #endif
