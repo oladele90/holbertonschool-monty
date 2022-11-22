@@ -40,3 +40,23 @@ void swap_op(stack_t **first_node, unsigned int line_number)
 	(*first_node)->n = (*first_node)->next->n;
 	(*first_node)->next->n = i;
 }
+
+/**
+ * add_op - adds elements in first two nodes of stack
+ * @first_node: pointer to pointer of first node in stack
+ * @line_number: current line number in file
+ */
+
+void add_op(stack_t **first_node, unsigned int line_number)
+{
+	stack_t *new;
+
+	if (*first_node == NULL || (*first_node)->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't add, stack too short", line_number);
+		exit(EXIT_FAILURE);
+	}
+	new = (*first_node)->next;
+	new->n += (*first_node)->n;
+	pop_op(first_node, line_number);
+}
