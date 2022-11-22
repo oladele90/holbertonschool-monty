@@ -13,6 +13,7 @@ void (*get_op(char *opcode, unsigned int line_number))(stack_t **, unsigned int
 	instruction_t ops[] = {
 		{"push", push_op},
 		{"pall", pall_op},
+		{"pint", pint_op},
 		{NULL, NULL}
 	};
 	int i;
