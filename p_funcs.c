@@ -2,9 +2,10 @@
 int num;
 
 /**
- *
- *
- *
+ * push_op - pushes new node to stack
+ * @first_node: pointer to pointer of first node in stack
+ * @line_number: current line number of file
+ * Return: nothing
  */
 
 void push_op(stack_t **first_node, unsigned int line_number)
@@ -30,7 +31,9 @@ void push_op(stack_t **first_node, unsigned int line_number)
 }
 
 /**
- *
+ * free_stack - frees a stack of nodes
+ * @first_node: pointer to first node in stack
+ * Return: nothing
  */
 
 void free_stack(stack_t *first_node)
@@ -49,7 +52,10 @@ void free_stack(stack_t *first_node)
 }
 
 /**
- *
+ * pall_op - prints all numbers in stack
+ * @first_node: pointer to pointer of first node in stack
+ * @line_number: current line number of file
+ * Return: nothing
  */
 
 void pall_op(stack_t **first_node, unsigned int line_number)
