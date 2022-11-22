@@ -22,7 +22,7 @@ void _open(char **argv)
 	{
 		token = strtok(buf, "\t\n ");
 		if (token == NULL)
-			continue;
+			return;
 		strcpy(command, token);
 		if (strcmp(token, "push") == 0)
 		{
