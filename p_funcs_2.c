@@ -33,7 +33,7 @@ void swap_op(stack_t **first_node, unsigned int line_number)
 
 	if (*first_node == NULL || (*first_node)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't add, stack too short", line_number);
+		fprintf(stderr, "L%d: can't swap, stack too short", line_number);
 		exit(EXIT_FAILURE);
 	}
 	i = (*first_node)->n;
