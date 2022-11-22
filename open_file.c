@@ -22,7 +22,7 @@ void _open(char **argv)
 	{
 		token = strtok(buf, "\t\n ");
 		if (token == NULL)
-			return;
+			continue;
 		strcpy(command, token);
 		if (strcmp(token, "push") == 0)
 		{
@@ -35,7 +35,7 @@ void _open(char **argv)
 		}
 		else
 		{
-			p_func = get_op(command, line_number);
+			p_func = get_op(token, line_number);
 			p_func(&first_node, line_number);
 		}
 		line_number++;
