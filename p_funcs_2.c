@@ -13,7 +13,7 @@ void pop_op(stack_t **first_node, unsigned int line_number)
 	new = *first_node;
 	if (new == NULL)
 	{
-		fprintf(stderr, "L%d: can't pop an empty stack", line_number);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	new = new->next;
@@ -33,7 +33,7 @@ void swap_op(stack_t **first_node, unsigned int line_number)
 
 	if (*first_node == NULL || (*first_node)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't swap, stack too short", line_number);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	i = (*first_node)->n;
@@ -53,7 +53,7 @@ void add_op(stack_t **first_node, unsigned int line_number)
 
 	if (*first_node == NULL || (*first_node)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't add, stack too short", line_number);
+		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	new = (*first_node)->next;

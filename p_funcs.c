@@ -2,9 +2,9 @@
 int num;
 
 /**
- *  - pushes new node to stack
- * : pointer to pointer of first node in stack
- * : current line number of file
+ * push_op - pushes new node to stack
+ * @first_node: pointer to pointer of first node in stack
+ * @line_number: current line number of file
  * Return: nothing
  */
 
