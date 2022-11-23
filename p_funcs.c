@@ -77,7 +77,7 @@ void pall_op(stack_t **first_node, unsigned int line_number)
 
 void pint_op(stack_t **first_node, unsigned int line_number)
 {
-	if (*first_node == NULL && first_node == NULL)
+	if (*first_node == NULL)
 	{
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
