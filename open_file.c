@@ -18,7 +18,7 @@ void _open(char **argv)
 	file = fopen(argv[1], "r");
 	if (file == NULL)
 		opf(argv);
-	for (;getline(&buf, &len, file) != -1; line_number++)
+	for (; getline(&buf, &len, file) != -1; line_number++)
 	{
 		token = strtok(buf, "\t\n ");
 		if (token == NULL)
@@ -40,8 +40,8 @@ void _open(char **argv)
 		}
 	}
 	fclose(file);
-	free(token);
-	free(buf);
+	if (!buf)
+		free(buf);
 	free_stack(first_node);
 }
 
