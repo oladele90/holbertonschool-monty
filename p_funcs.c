@@ -70,9 +70,9 @@ void pall_op(stack_t **first_node, unsigned int line_number)
 }
 
 /**
- *
- *
- *
+ * pint_op - prints first number in stack
+ * @first_node: pointer to pointer of first node in stack
+ * @line_number: current line number of file
  */
 
 void pint_op(stack_t **first_node, unsigned int line_number)
