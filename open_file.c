@@ -18,7 +18,7 @@ void _open(char **argv)
 	file = fopen(argv[1], "r");
 	if (file == NULL)
 		opf(argv);
-	while (getline(&buf, &len, file) != -1)
+	for (; getline(&buf, &len, file) != -1; line_number++)
 	{
 		token = strtok(buf, "\t\n ");
 		if (token == NULL)
@@ -38,7 +38,6 @@ void _open(char **argv)
 			p_func = get_op(token, line_number);
 			p_func(&first_node, line_number);
 		}
-		line_number++;
 	}
 	fclose(file);
 	if (buf != NULL)
