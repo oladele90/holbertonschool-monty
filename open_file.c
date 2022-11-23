@@ -41,7 +41,7 @@ void _open(char **argv)
 		line_number++;
 	}
 	fclose(file);
-	if (!buf)
+	if (buf == NULL)
 		free(buf);
 	free_stack(first_node);
 }
