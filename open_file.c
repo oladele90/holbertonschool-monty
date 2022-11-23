@@ -1,4 +1,4 @@
- #include "monty.h"
+#include "monty.h"
 
 /**
  * _open - opens monty file and executes commands
@@ -41,7 +41,7 @@ void _open(char **argv)
 		line_number++;
 	}
 	fclose(file);
-	if (buf == NULL)
+	if (buf != NULL)
 		free(buf);
 	free_stack(first_node);
 }
